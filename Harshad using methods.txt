@@ -1,0 +1,47 @@
+import java.util.*;
+public class Harshad
+{
+    int num;
+    void input(){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number");
+        num=sc.nextInt();
+    }
+
+    int sumDigits(){
+        int sum=0; int d;
+       
+        while(num!=0){
+            d=num%10;
+            sum+=d;
+            num/=10;
+        }
+        return sum;
+    }
+
+    boolean isHarshad(){
+        boolean flag;
+        if(num%sumDigits()==0){
+            flag=true;
+        }
+        else{
+            flag=false;
+        }
+        return flag;
+    }
+    void Display(){
+        if(isHarshad()){
+        System.out.println("Is Harshad number");
+        }
+        else{
+            System.out.println("Not Harshad");
+        }
+    }
+    public static void main(String[]args){
+        Harshad obj=new Harshad();
+            obj.input();
+            obj.Display();
+            
+        }
+    }
+
