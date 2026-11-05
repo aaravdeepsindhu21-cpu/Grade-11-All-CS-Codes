@@ -1,0 +1,52 @@
+import java.util.*;
+public class Q4arrays
+{
+    int n;
+    int m;
+    int arr1[];
+    int arr2[];
+    int arr3[];
+
+    void input(){
+        arr1=new int [n];
+        arr2=new int [m];
+        arr3=new int [n+m];
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        m=sc.nextInt();
+        for(int i=0;i<n;i++){
+            arr1[i]=sc.nextInt();
+        }
+        for(int i=0;i<m;i++){
+            arr2[i]=sc.nextInt();
+        }
+        
+    }
+
+    void merge(){
+    for(int i=0,j=0;i<m+n&&j<m;i++,j++){
+        if(i<n){
+            arr3[i]=arr1[i];
+        }
+        else{
+            arr3[j]=arr2[j];
+        }
+    }
+    }
+
+    void Display(){
+        for(int i=0;i<n;i++){
+            System.out.println(arr3[i]);
+        }
+    }
+
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        Q4arrays obj=new Q4arrays();
+        obj.input();
+        obj.merge();
+        obj.Display();
+    }
+}
+ 

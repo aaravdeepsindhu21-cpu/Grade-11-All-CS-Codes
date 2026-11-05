@@ -1,0 +1,43 @@
+import java.util.*;
+public class Q5arrays
+{
+    int n;
+    int arr[];
+    int size;
+    void input(){
+        Scanner sc=new Scanner(System.in);
+        size=sc.nextInt();
+        n=sc.nextInt();
+        arr=new int[size];
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        }
+    }
+
+    void findPairs(){
+        for(int i=0;i<size;i++){
+            for(int j=i+1;j<size;j++){
+                if(arr[i]+arr[j]==n){
+                    System.out.println("Arrays are"+arr[i]+arr[j]);
+                }
+            }
+        }
+ 
+    }
+    public static void main(String args[]){
+        Q5arrays obj=new Q5arrays();
+        obj.input();
+        obj.findPairs();
+    }
+
+
+
+
+
+
+
+
+}
+
+
+
